@@ -21,3 +21,12 @@ White	37
 
 \33[(colorcode)m
 
+Day 10:
+
+floats auf 2 dezimal stellen begrenzen mit:
+
+variable = round(answer,2)
+
+oder 
+
+variable = "{:.2f}".format(variable)
