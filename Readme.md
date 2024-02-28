@@ -30,3 +30,13 @@ variable = round(answer,2)
 oder 
 
 variable = "{:.2f}".format(variable)
+
+Day 17:
+
+while loop break, exit(), continue
+
+mit break brechen wir aus dem loop aus und der nächste command außerhalb des loops wird executed
+
+mit exit() schließen wir das komplette script also werden alle commands nach exit () nicht ausgeführt
+
+mit continue starten wir einen loop von vorne und alle commands nach continue werden ignoriert
