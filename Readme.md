@@ -40,3 +40,16 @@ mit break brechen wir aus dem loop aus und der nächste command außerhalb des l
 mit exit() schließen wir das komplette script also werden alle commands nach exit () nicht ausgeführt
 
 mit continue starten wir einen loop von vorne und alle commands nach continue werden ignoriert
+
+Day 29:
+print secrets
+
+ich kann festlegen was , in str machen
+print("Hey","wie gehts")
+hier macht das , automatisch einen abstand
+aber mit sep (seperator) kann ich was anderes festlengen
+print("Hey","wie gehts",sep=0) --> Hey0wie gehts
+
+mit end= kann ich festlegen was am ende eines strings passiert und somit auch
+die automatische newline funktion deaktivieren um mit mehrern
+print statements in einer zeile was zu schreiben
