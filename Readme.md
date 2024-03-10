@@ -68,3 +68,22 @@ mit 2 wird nur jeder 2. Charakter ausgegeben mit [::-1] wird der ganze String r�
 
 mit split() können wir einen String in eine liste verwandeln bei jedem Leerzeichen wird ein neues Objekt gesplittet:
 "Hello There how are you" --> ["Hello", "There", "how", "are", "you"]
+
+Day 41:
+Dictionaries
+
+ich kann mit .keys() nur die key werte einer dict callen oder mit .items() die keys und die values
+
+for name in website.keys():
+    
+    if name == "rating":
+        website[name] = int(input(f"{name}: ")) * "*"
+    else:
+        website[name] = input(f"{name}: ")
+
+hier gehe ich die key werte einer dict die date von einer website speichern soll durch und hole mit einen input für jeden einzelne key
+
+for name, value in website.items():
+    print(f"{name}:{value}")
+
+hier gebe ich den key gefolt von dessen value dann aus die ich festgelegt habe
