@@ -1,0 +1,121 @@
+100 Days python Challenge
+auf Replit.com
+
+
+Things i learned:
+
+Day4:
+
+\33[31m everything after that in a print statement has a different color
+
+Color	Value
+Default	\33[0m
+Black	\33[30m
+Red	    \33[31m
+Green	\33[32m
+Yellow	\33[33m
+Blue	\33[34m
+Purple	\33[35m
+Cyan	\33[36m
+White	\33[37m
+
+\33[(colorcode)m
+
+Day 10:
+
+floats auf 2 dezimal stellen begrenzen mit:
+
+variable = round(answer,2)
+
+oder 
+
+variable = "{:.2f}".format(variable)
+
+Day 17:
+
+while loop break, exit(), continue
+
+mit break brechen wir aus dem loop aus und der nächste command außerhalb des loops wird executed
+
+mit exit() schließen wir das komplette script also werden alle commands nach exit () nicht ausgeführt
+
+mit continue starten wir einen loop von vorne und alle commands nach continue werden ignoriert
+
+Day 29:
+print secrets
+
+ich kann festlegen was , in str machen
+print("Hey","wie gehts")
+hier macht das , automatisch einen abstand
+aber mit sep (seperator) kann ich was anderes festlengen
+print("Hey","wie gehts",sep=0) --> Hey0wie gehts
+
+mit end= kann ich festlegen was am ende eines strings passiert und somit auch
+die automatische newline funktion deaktivieren um mit mehrern
+print statements in einer zeile was zu schreiben
+
+Day 37:
+
+String Splicing 
+
+mit index [0] kann man einzelnen Charakter in einem String lesen
+
+wenn man 2 Argumenten getrennt von einem : nimmt kann man die Charakter x bis x lesen [0:6] --> vom start bis zum 6. Charakter
+
+man kann aber auch ein 3. Argument benutzen [0:6:2] das dritte argument gibt an wie das ganze gelesen werden soll
+
+mit 2 wird nur jeder 2. Charakter ausgegeben mit [::-1] wird der ganze String rückwärts ausgegeben
+
+mit split() können wir einen String in eine liste verwandeln bei jedem Leerzeichen wird ein neues Objekt gesplittet:
+"Hello There how are you" --> ["Hello", "There", "how", "are", "you"]
+
+Day 41:
+Dictionaries
+
+ich kann mit .keys() nur die key werte einer dict callen oder mit .items() die keys und die values
+
+for name in website.keys():
+    
+    if name == "rating":
+        website[name] = int(input(f"{name}: ")) * "*"
+    else:
+        website[name] = input(f"{name}: ")
+
+hier gehe ich die key werte einer dict die date von einer website speichern soll durch und hole mit einen input für jeden einzelne key
+
+for name, value in website.items():
+    print(f"{name}:{value}")
+
+hier gebe ich den key gefolt von dessen value dann aus die ich festgelegt habe
+
+
+Day 54:
+CSV Dateien werden oft benutzt Daten von Unternehmen wie Einnahmen ausgaben aufzuzeichen
+
+Man kann sie ähnlich wie Dicitionaries betrachten
+
+am anfang einer CSV Datei werden die keys festgelegt:
+
+Cost,Quantity
+
+danach folgen die daten getrennt durch einen beistrich:
+
+Cost,Quantity
+340.17,3
+974.94,4
+802.03,2
+29.08,3
+
+und so weiter wir können CSV dateien lesen es gibt eine library dafür 
+
+import csv
+
+with open(FILE_NAME,"r",encoding="UTF-8") as f:
+    reader = csv.DictReader(f) #wandelt die csv in eine dict um 
+    total = 0
+    for row in reader:
+        total = float(row["Cost"]) * int(row["Quantity"])
+    print(f"The total cost is {total:.2f}€")
+
+Hier öffnen wir die CSV Datei lesen den inhalt mit csv.DictReader und geben ihn dann ähnlich wie bei einer
+dict aus
