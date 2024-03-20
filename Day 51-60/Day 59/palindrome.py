@@ -1,6 +1,6 @@
 
 print("Palindrome Checker")
-word = input("Enter a word\n> ")
+word_user = input("Enter a word\n> ")
 
 def palindrome(word):
     word = word.lower().replace(" ","")
@@ -10,4 +10,4 @@ def palindrome(word):
         return False
     return palindrome(word[1:-1])
 
-print(palindrome(word))
+print(palindrome(word_user))
