@@ -119,3 +119,51 @@ with open(FILE_NAME,"r",encoding="UTF-8") as f:
 
 Hier öffnen wir die CSV Datei lesen den inhalt mit csv.DictReader und geben ihn dann ähnlich wie bei einer
 dict aus
+
+
+
+Day 64
+Bei Inheritance von Klassen
+
+wenn ich eine klasse wie z.B. job erstelle 
+
+class job:
+    name=None
+    salary=None
+    hours=None
+    
+    def __init__(self, name,salary,hours):
+        
+        self.name = name
+        self.salary = salary
+        self.hours = hours
+    
+    def infos(self):
+        print()
+        print(f"Job Type: {self.name}")
+        print(f"Salary: € {self.salary}")
+        print(f"Hours worked: {self.hours} h")
+        print()
+
+und dann diese auf einen job anpassne bzw inheriten mag z.B. Doktor
+kann ich in init die inits von der übergeordneten Klasse (Jobs) mit super abrufen
+
+class doctor(job):
+    
+    speciality=None
+    xp=None
+    
+    def __init__(self,salary,hours, speciality,xp):
+        
+        super().__init__("Doctor",salary,hours)
+        self.speciality = speciality
+        self.xp = xp
+    
+    def infos(self):
+        print()
+        super().infos()
+        print(f"Speciality: {self.speciality}")
+        print(f"Work experience: {self.xp} years")
+        print()
+
+hier füge ich speciality und work experience dazu und rufe die werte der übergeordneten Klasse mit super aber
