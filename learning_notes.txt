@@ -47,7 +47,7 @@ print secrets
 ich kann festlegen was , in str machen
 print("Hey","wie gehts")
 hier macht das , automatisch einen abstand
-aber mit sep (seperator) kann ich was anderes festlengen
+aber mit sep (seperator) kann ich was anderes festlegen
 print("Hey","wie gehts",sep=0) --> Hey0wie gehts
 
 mit end= kann ich festlegen was am ende eines strings passiert und somit auch
@@ -167,3 +167,33 @@ class doctor(job):
         print()
 
 hier füge ich speciality und work experience dazu und rufe die werte der übergeordneten Klasse mit super aber
+
+Day 70:
+secrets
+um Passwörter und API keys nicht direkt in einem script zu hardcoden
+kann ich diese in der .env file festlegen
+
+ich benutzte dann die dotenv library mit
+
+from dotenv import load_dotenv
+
+lade due .env file mit load_dotenv()
+
+in der .env file kann ich sachen wie z.B. Passworter so festlegen:
+
+EXAMPLEPW=123
+
+ich kann die dann mit os in eine var verwandeln
+
+example_pw = os.getenv("EXAMPLEPW")
+
+wir können die .env datei aber auch als dictionary laden mit
+
+from dotenv import dotenv_values
+
+users = dotenv_values(".env")
+
+
+!!!wenn ich etwas auf github pushe eine .gitignore file erstellen und in diese .env reinschreiben
+sonst werden meine passwörter auf mein github account gepusht
+
