@@ -1,9 +1,12 @@
 import subprocess
+import os
+
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 def auto_play():
     while True:
         # Starte das Spiel als Subprozess
-        process = subprocess.Popen(["python", "D:\\Cybersec\\Python\\100 Days Python\\100_Days_Python\\Day 11-20\\Day 18\\number_guess.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+        process = subprocess.Popen(["python", "number_guess.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
         # Initialisiere die Grenzen des Zahlenbereichs
         low_limit, high_limit = 1, 1000000
         # Zähle die Versuche

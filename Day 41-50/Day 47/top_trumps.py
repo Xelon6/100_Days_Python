@@ -78,24 +78,42 @@ def battle():
         
     print(f"The Computer has choose {comp}")
     print()
-    print("Choose your stat:\n1.) Intelligence\n2.) Speed\n3.) Strength\n4.) Endurance")
-    stat = input("> ").lower().strip()
-    if "int" in stat or stat == "1":
-        stat = "Intelligence"
-    elif "spe" in stat or stat == "2":
-        stat = "Speed"
-    elif "str" in stat or stat =="3":
-        stat="Strength"
-    elif "end" in stat or stat == "4":
-        stat = "Endurance"
-    else:
-        print("Invalid stat choosen")
+    while True:
+        print("Choose your stat:\n1.) Intelligence\n2.) Speed\n3.) Strength\n4.) Endurance")
+        stat = input("> ").lower().strip()
+        if "int" in stat or stat == "1":
+            stat = "Intelligence"
+            break
+        elif "spe" in stat or stat == "2":
+            stat = "Speed"
+            break
+        elif "str" in stat or stat =="3":
+            stat="Strength"
+            break
+        elif "end" in stat or stat == "4":
+            stat = "Endurance"
+            break
+        else:
+            clear_console()
+            print("Invalid stat choosen")
 
     if trumps[user][stat] < trumps[comp][stat]:
+        print(f"Your Trump has a\33[34m {stat} \33[0mof \33[34m{trumps[user][stat]}\33[0m ")
+        print("vs")
+        print(f"The Computer's Trump has a \33[34m{stat}\33[0m of \33[34m{trumps[comp][stat]}\33[0m ")
+        print()
         print("The Computer's Trump",comp,"has Won.")
     elif trumps[user][stat] > trumps[comp][stat]:
+        print(f"Your Trump has a\33[34m {stat} \33[0mof \33[34m{trumps[user][stat]}\33[0m ")
+        print("vs")
+        print(f"The Computer's Trump has a \33[34m{stat}\33[0m of \33[34m{trumps[comp][stat]}\33[0m ")
+        print()
         print("Your Trump",user,"has Won. :)")
     else:
+        print(f"Your Trump has a\33[34m {stat} \33[0mof \33[34m{trumps[user][stat]}\33[0m ")
+        print("vs")
+        print(f"The Computer's Trump has a \33[34m{stat}\33[0m of \33[34m{trumps[comp][stat]}\33[0m ")
+        print()
         print("Draw")
 
 

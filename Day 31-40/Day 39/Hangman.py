@@ -2,12 +2,15 @@ import os
 import time
 import random
 
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
+
 # Initialisierung von Variablen für falsch geratene Buchstaben und bereits geratene Buchstaben
 wrong_letter = ""
 guessed = ""
 
 # Öffnen der Wortliste aus einer Datei
-with open("D:\\Cybersec\\Python\\100 Days Python\\100_Days_Python\\Day 31-40\\Day 39\\wordlist.txt", "r", encoding="utf8") as wordlist:
+with open("wordlist.txt", "r", encoding="utf8") as wordlist:
     # Erstellen einer Liste von Wörtern aus der Wortliste
     words = [word.strip() for word in wordlist.readlines()]
 
@@ -51,8 +54,10 @@ print(display_)
 
 lives = 6
 while True:
+    
     # Benutzereingabe für einen Buchstaben
     guess = input("\nGuess a letter\n>")
+    clear_console()
     if len(guess) > 1:
         print("Please only enter 1 letter at a time")
         continue
