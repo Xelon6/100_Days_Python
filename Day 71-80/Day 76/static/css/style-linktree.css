@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: rgb(61, 65, 65);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url("images/background1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+img {
+  width: 600px;
+  height: auto;
+  border-radius: 15px;
+  border: 3px double darkgrey;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  text-align: center;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: 42%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+a, h3 {
+  font-size: 25px;
+  color: rgb(230, 224, 224);
+  text-decoration: none;
+}
+
+.linkbox{
+  
+  background-color: rgb(40, 74, 77);
+  margin: auto;
+  color: black;
+  width: 65%;
+  height: 100px;
+  padding: 10px 0; /* Fügen Sie Padding für den Inhalt im Banner hinzu */
+  box-sizing: border-box; /* Um das Padding in die Breite und Höhe der Box einzubeziehen */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+}
+.logo {
+  position: absolute; /* Stellen Sie das Logo absolut innerhalb der Linkbox ein */
+  left: 20%; /* Platzieren Sie das Logo ganz links */
+  top: 50%; /* Zentrieren Sie das Logo vertikal */
+  transform: translateY(-50%); /* Zentrieren Sie das Logo vertikal */
+  width: 70px; /* Setzen Sie die Breite des Logos */
+  height: 70px; /* Setzen Sie die Höhe des Logos */
+  margin-right: 20px; /* Abstand zwischen Logo und Text */
+  border: none; /* Entfernen Sie die Standard-Rahmen */
+  border-radius: 50%; /* Runden Sie das Bild */
+  object-fit: cover; /* Skalieren Sie das Bild, ohne das Seitenverhältnis zu verlieren */
+}
+
+.grey-banner {
+  font-style: italic;
+  font-size: 26px ;
+  background-color: rgba(149, 230, 236, 0.493);
+  margin: auto;
+  color: black;
+  width: 50%;
+  padding: 10px 0; /* Fügen Sie Padding für den Inhalt im Banner hinzu */
+  box-sizing: border-box; /* Um das Padding in die Breite und Höhe der Box einzubeziehen */
+  border-radius: 10px;
+}
