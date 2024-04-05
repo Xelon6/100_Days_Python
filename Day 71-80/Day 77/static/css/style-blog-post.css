@@ -1,0 +1,108 @@
+html,body{
+    margin:0;
+    padding:0;
+    font-size: 16px; /* Standard-Schriftgröße für den Text */
+  }
+  
+  body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+h2{
+    text-align: center;
+    font-size: 12px;
+}
+
+  p{
+    text-align: left;
+    margin:0 10px 10px;
+    line-height: 1.4; /* Zeilenhöhe für den Text */
+  }
+  
+  a{
+    padding:5px;
+    text-decoration:none;
+    color:#000000;
+  }
+  
+  div#header{
+    background-color:#F3F2ED;
+  }
+  
+  div#header h1{
+    height:80px;
+    line-height:80px;
+    margin:0;
+    padding-left:10px;
+  }
+  
+  div#container{
+    text-align:left;
+    width:70%; /* Breite des Hauptcontainers in Prozent */
+    margin:0 auto; /* Zentrieren des Containers */
+  }
+  
+  div#content{
+    float:left;
+    width: calc(70% - 200px); /* Breite des Inhaltsbereichs in Prozent abzüglich der Breite des Navigationsbereichs */
+  }
+  
+  
+  div#extra{
+    float:left;
+    width:70%; /* Breite des zusätzlichen Bereichs in Prozent */
+  }
+  
+  
+  
+  .white-box {
+    background-color: rgb(39, 49, 56);
+    color: rgb(255, 247, 247);
+    width: 90%; /* Breite der weißen Box in Prozent */
+    max-width: 700px; /* Maximal zulässige Breite der weißen Box */
+    margin: 50px auto 0; /* 50px Abstand oben, zentriert horizontal */
+    padding: 30px; /* Platz um den Inhalt herum */
+    box-sizing: border-box; /* Um das Padding in die Breite und Höhe der Box einzubeziehen */
+    overflow: auto;
+    border-radius: 10px;
+  }
+  
+  .white-box img {
+    max-width: 100%; /* Bilder passen sich automatisch an die Breite der weißen Box an */
+  }
+  
+  .grey-banner {
+    font-style: italic;
+    font-size: 26px ;
+    background-color: rgb(15, 15, 15);
+    margin: auto;
+    color: rgb(255, 255, 255);
+    width: 50%;
+    padding: 10px 0; /* Fügen Sie Padding für den Inhalt im Banner hinzu */
+    box-sizing: border-box; /* Um das Padding in die Breite und Höhe der Box einzubeziehen */
+    border-radius: 10px;
+  }
+  
+  
+  h3{
+    font-size: 1.3125rem; /* Größe für h3 in rem */
+  }
+  
+  h4 {
+    font-size: 1.25rem; /* Größe für h4 in rem */
+  }
+  
+  p{
+    font-size: 1.12rem; /* Größe für p in rem */
+  }
+  
+  a {
+    font-size: 1rem;
+    color: rgb(154, 177, 61);
+    text-decoration: underline;
+  }
+  
