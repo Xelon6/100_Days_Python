@@ -197,7 +197,7 @@ users = dotenv_values(".env")
 !!!wenn ich etwas auf github pushe eine .gitignore file erstellen und in diese .env reinschreiben
 sonst werden meine passwörter auf mein github account gepusht
 
-Day 73 - 79
+Day 73 - 81 (html,css,flask)
 
 html benutze boilerplate code um eine html dokument zu starten
 
@@ -251,3 +251,65 @@ wenn wir var auf der website wie z.B. {link} haben und verändern wollen machen 
 
     return page
 
+mit <form> können wir eingabe felder auf einer website erstellen
+hier die möglichen eingabefelder
+
+<form>
+    <p>Name: <input type="text" name="username" required> </p>
+    <p>Email: <input type="Email" name="email"> </p>
+    <p>Website: <input type="url" name="website"> </p>
+    <p>Age: <input type="number" name="age"> </p>
+    <p><input type="hidden" name="userID" value="232"> </p>
+    
+  </form>
+
+required macht ein eingabefeld ein Pflichtfeld
+natürlich gibt es auch buttons
+
+<form>
+  <button type="submit">Save Data</button>
+</form>
+
+es gibt natürlich auch verschiedene Knöpfe
+
+Dropdown Menu:
+
+<form>
+    <p>
+      Fave Baldy: 
+      <select name="baldies">
+        <option>David</option>
+        <option>Jean Luc Picard</option>
+        <option>Yul Brynner</option>
+      </select>
+    </p>
+</form>
+
+um die form daten in flask retour zu bekommen muss man bei form angeben wie und wohin die daten gesendet werden
+<form method="post" action="/login">
+mit POST werden die daten an /login gesendete
+
+
+import request
+
+@app.route('/login',methods=["POST"])
+def login():
+    form = request.form
+
+wenn wir /login definieren können wir mit request die daten empfangen und in eine var verwandeln
+
+in flask kann ich mit url_for das hardcoden von den app.route verhindern
+
+in python
+@app.route('/123')
+def home():
+    return "123"
+
+in html
+<a href="{{ url_for('home') }}">Zur Startseite</a>
+
+hier fügt flask automatisch in html die richtige app.route ein
+
+go back button:
+
+<form action="{back_link}" method="get"><button type="submit">Go Back</button></form>
