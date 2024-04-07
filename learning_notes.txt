@@ -197,3 +197,57 @@ users = dotenv_values(".env")
 !!!wenn ich etwas auf github pushe eine .gitignore file erstellen und in diese .env reinschreiben
 sonst werden meine passwörter auf mein github account gepusht
 
+Day 73 - 79
+
+html benutze boilerplate code um eine html dokument zu starten
+
+wenn man einen css stylesheet benutzt diesen im head verlinken
+
+<head>
+<link rel="stylesheet" href="example_folder/example.css">
+</head>
+
+
+<h1> --> h für header (Überschrift)
+<p> --> Paragraph
+<a href="{link}" target="_blank">{link_text}</a> link 
+
+wir können mit flask einen webserver starten
+
+from flask import Flask
+
+app = Flask(__name__)
+
+wenn wir bilder auf der website laden wollen mit flask müssen wir einen static ordner festlegen wo die bilder gespeichert sind
+
+app=Flask(__name__,static_url_path='/static')
+
+wir können dann die html seiden als templates laden wenn wir wollen können wir auch variable in der html festlegen
+um viele verschiedene seiten mit einer html Grundlage zu erstellen
+
+um in flask eine seite zu erstellen müssen wir zuerst die addresse der seite festlegen
+
+@app.route('/example')
+
+danach definieren wir die seite als funktion
+
+def example_page():
+
+wenn wir ein template benutzen müssen wir dieses laden
+
+    with open("template/reflection.html","r",encoding="UTF-8") as f:
+        page = f.read()
+    return page
+
+return page gibt die seite zurück
+
+wenn wir var auf der website wie z.B. {link} haben und verändern wollen machen wir das mit replace
+
+    link='example_link'
+
+    with open("template/reflection.html","r",encoding="UTF-8") as f:
+        page = f.read()
+        page = page.replace('{link}',link)
+
+    return page
+
