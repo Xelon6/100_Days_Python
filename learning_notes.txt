@@ -313,3 +313,11 @@ hier fügt flask automatisch in html die richtige app.route ein
 go back button:
 
 <form action="{back_link}" method="get"><button type="submit">Go Back</button></form>
+
+wenn ich eine seite lade bzw. einen text festlege kann ich da noch was dazuadden
+
+page = "HELLO WORLD"
+with open("FILE_NAME","r",encoding="UTF-8") as f:
+    page += f.read()
+
+mit dem += adde ich die seite unter dem Text HELLO WORLD dazu
