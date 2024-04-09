@@ -321,3 +321,36 @@ with open("FILE_NAME","r",encoding="UTF-8") as f:
     page += f.read()
 
 mit dem += adde ich die seite unter dem Text HELLO WORLD dazu
+
+Cookies:
+
+from flask import session
+from dotenv import load_dotenv
+
+wir legen eine .env datei mit einem secret session key an
+dann laden wir die .env mit load_dotenv()
+
+app = Flask(__name__)
+app.secret_key = os.getenv("SESSION_KEY")
+
+laden den session key und jetzt können wir ähnlich wie eine db session spezifische daten speichern
+
+
+session["login"] = Username
+
+und dann auf jedere anderen seite abfragen
+
+@app.route('/andere_Seite')
+def andere_Seite():
+    username = session["login"]
+
+wir können mit eine js button zu einer reset seite weiterleiten
+
+<button type="button" onclick="location.href='/reset'">Logout</button>
+
+und dann mit einer app route session.clear() benutzen um den cookie zu resetten
+
+@app.route("/reset")
+def reset():
+    session.clear()
+    return redirect("/")
