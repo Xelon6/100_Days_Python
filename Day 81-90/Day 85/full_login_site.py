@@ -149,7 +149,7 @@ def view():
         return redirect('/')
     page = "Nothing Much to view ey<br>"
     page += f"Dont sweat it {session["login"]}"
-    page += "<form action='/profile' method='GET'><input type='submit' value='Go Back to Profle'></form>"
+    page += "<form action='/profile' method='GET'><input type='submit' value='Go Back to Profile'></form>"
     return page
 
 @app.route("/reset")
