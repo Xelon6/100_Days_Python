@@ -1,0 +1,223 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(../static/images/background.webp);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.button:hover {
+    background: #a8a5a5;
+}
+
+.log_block {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 60px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.log_block input[type="text"],
+.log_block input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Wichtig für das korrekte Box-Modell */
+}
+
+.log_block input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.title-box {
+    width: 600px; /* Breite der Box */
+    margin: 0 auto; /* Zentriert die Box horizontal */
+    margin-top: 60px;
+    padding: 20px; /* Innenabstand der Box */
+    background-color: #f2f2f2; /* Hintergrundfarbe */
+    border-radius: 10px; /* Runde Ecken */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Schatten */
+    text-align: center; /* Zentriert den Text im Container */
+}
+
+.title {
+    font-size: 40px; /* Größe des Titels */
+    color: #333; /* Textfarbe */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold; /* Fettschrift */
+}
+
+.profile_box {
+    width: 400px; /* Breite der Box */
+    margin: 0 auto; /* Zentriert die Box horizontal */
+
+    padding: 15px; /* Innenabstand der Box */
+    background-color: #f2f2f2; /* Hintergrundfarbe */
+    border-radius: 10px; /* Runde Ecken */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Schatten */
+    text-align: center; /* Zentriert den Text im Container */
+}
+
+.profile_text {
+    font-size: 16px; /* Größe des Titels */
+    color: #333; /* Textfarbe */
+
+    font-weight: bold; /* Fettschrift */
+}
+
+.chat-box {
+    display: flex; /* Flexbox-Layout verwenden */
+    flex-direction: column; /* Anordnung der Elemente in einer Spalte */
+    justify-content: space-between; /* Platzieren der Elemente am oberen und unteren Rand */
+    width: 400px; /* Breite der Box */
+    margin: 0 auto; /* Zentriert die Box horizontal */
+    padding: 15px; /* Innenabstand der Box */
+    background-color: #f2f2f2; /* Hintergrundfarbe */
+    border-radius: 10px; /* Runde Ecken */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Schatten */
+    text-align: center; /* Zentriert den Text im Container */
+    word-wrap: break-word;
+    min-height: 495px; /* Mindesthöhe der Box */
+}
+
+.send {
+    margin-top: auto; /* Setzt das "Send Message"-Formular ans untere Ende */
+}
+
+.send input[type="text"] {
+    width: calc(100% - 80px); /* Breite des Inputs berechnen */
+    padding: 10px; /* Innenabstand */
+    margin-bottom: 10px; /* Abstand nach unten */
+    border: none; /* Kein Rand */
+    border-radius: 5px; /* Abgerundete Ecken */
+    background-color: #fff; /* Hintergrundfarbe */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Schatten */
+    box-sizing: border-box; /* Box-Modell */
+    font-size: 16px; /* Schriftgröße */
+}
+
+.send input[type="text"]:focus {
+    outline: none; /* Keine Fokusumrandung */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Schatten bei Fokus */
+}
+
+.chat-text{
+    text-align: left;
+    font-size: 16px; /* Größe des Titels */
+    color: #333; /* Textfarbe */
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: bold; /* Fettschrift */
+    
+}
+.chat-text + hr {
+    margin-top: 5px;
+    border: none;
+    border-top: 1px solid #636363;
+}
+
+.username {
+    font-size: 18px;
+    color: rgb(103, 20, 49); /* Farbe des Benutzernamens */
+}
+.settings_block{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 60px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.settings_block ul {
+    list-style: none;
+    padding: 0;
+}
+.settings_block li {
+    margin-bottom: 10px;
+}

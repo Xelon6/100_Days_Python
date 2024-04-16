@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{use}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/{style}">
+</head>
+<body>
+    <div class="title-box">
+        <h1 class="title">The best Chatroom</h1>
+    </div>
+    
+    <div class="log_block">
+        <h2>{use}</h2>
+        <form action="{action}" method="post" onsubmit="return check()">
+            <p>Password: <input type="password" id="password" name="password" required></p>
+            <p>Confirm Password: <input type="password" id="confirmPassword" name="confirmPassword" required></p>
+            <p id="passwordMessage"></p>
+            <input type="hidden" name="typ" id="typ" value="{typ}">
+            <p>New {new_type}: <input type="{input_type}" id="new" name="new" required></p>
+            <p>Confirm new {new_type}:<input type="{input_type}" id="new_confirm" name="new_confirm" required></p>
+            
+            <p id="newPasswordMessage"></p>
+            <button type="submit" class="button">{button1_text}</button>
+        </form>
+        {button2}
+    </div>
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var messageElement = document.getElementById("passwordMessage");
+          
+            if (password !== confirmPassword) {
+                messageElement.textContent = "Passwords don't match";
+                return false; // Prevents form submission
+            } else {
+                messageElement.textContent = ""; // Clears the error message if passwords match
+                return true; // Allows form submission
+            }
+        }
+        
+        function validatenew() {
+            var newPassword = document.getElementById("new").value;
+            var confirmNewPassword = document.getElementById("new_confirm").value;
+            var messageElement = document.getElementById("newPasswordMessage");
+          
+            if (newPassword !== confirmNewPassword) {
+                messageElement.textContent = "{new_type}s don't match";
+                return false; // Prevents form submission
+            } else {
+                messageElement.textContent = ""; // Clears the error message if passwords match
+                return true; // Allows form submission
+            }
+        }
+        
+        function check() {
+            var newPasswordValid = validatenew();
+            var passwordValid = validatePassword();
+            var messageElement = document.getElementById("newPasswordMessage");
+            
+            if (!newPasswordValid || !passwordValid) {
+                messageElement.textContent = "{new_type}s don't match";
+                return false;
+            } else {
+                messageElement.textContent = ""; // Clears the error message if everything is correct
+                return true;
+            }
+        }
+        
+    </script>
+
+    
+</body>
+</html>
