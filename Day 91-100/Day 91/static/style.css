@@ -1,0 +1,51 @@
+/* HTML-Element */
+html {
+    font-family: sans-serif;
+    background-color: dimgray;
+    display: flex; /* Flexbox-Container für die Zentrierung */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    height: 100vh; /* Volle Höhe des Viewports verwenden */
+}
+
+/* Schaltfläche */
+.button {
+    border-radius: 10px;
+    padding: 10px 20px; /* Anpassen des Padding für eine bessere Optik */
+    margin-top: 20px; /* Erhöhte Margin für Abstand von oben */
+    background-color: rgb(70, 130, 180); /* Hintergrundfarbe der Schaltfläche */
+    color: white; /* Textfarbe der Schaltfläche */
+    border: none; /* Entfernen der Randlinien */
+    cursor: pointer; /* Zeige Handzeiger beim Überfahren an */
+    font-size: 16px; /* Schriftgröße */
+    transition: background-color 0.3s; /* Übergangseffekt für Farbänderungen */
+}
+
+.button:hover {
+    background-color: rgb(30, 100, 150); /* Hintergrundfarbe ändern bei Hover */
+}
+
+/* Überschrift */
+h1 {
+    text-align: center;
+    color: rgb(194, 210, 210);
+}
+
+/* Absatz */
+p {
+    text-align: center;
+    color: rgb(194, 210, 210);
+    border: 1px solid black;
+    padding: 20px; /* Hinzufügen von Padding für verbesserte Lesbarkeit */
+    border-radius: 10px; /* Abrundung der Ecken */
+}
+/* Joke-Listenelement */
+.joke {
+    text-align: center;
+    color: rgb(218, 218, 218);
+    background-color: rgba(255, 255, 255, 0.1); /* Hintergrundfarbe mit Transparenz */
+    border: 1px solid black;
+    padding: 20px; /* Anpassen des Padding für eine bessere Optik */
+    margin: 5px 5px; /* Margin oberhalb und unterhalb für Abstand zwischen den Elementen */
+    border-radius: 5px; /* Abrundung der Ecken */
+}
