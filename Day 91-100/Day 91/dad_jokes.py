@@ -57,8 +57,10 @@ def index():
     
     return page
 
+
 @app.route("/save",methods=["POST"])
 def save_joke():
+    """speichert die joke ids in einer json datei"""
     form=request.form
     unique_id=form["joke_id"]
 
@@ -76,6 +78,7 @@ def save_joke():
 
 @app.route("/view")
 def view():
+    """ruft die jokes mit ihrer json id ab und zeigt sie dann an"""
     page=read_template("view")
     joke_list=""
     try:

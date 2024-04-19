@@ -354,3 +354,20 @@ und dann mit einer app route session.clear() benutzen um den cookie zu resetten
 def reset():
     session.clear()
     return redirect("/")
+
+requests lib, json:
+
+Day 91 +
+
+ich kann mit requests seiten abfragen bzw. sachen dorthin senden
+
+import requests
+
+result = requests.get("example_link.com")
+
+um die daten dann aber schöner zu lesen kann ich json benutzen (da die meisten daten in json formate gesendet werden)
+
+user = result.json()
+print(json.dumps(user, indent=2))
+
+dies sollte die daten dann in einem schönen json format anzeigen
